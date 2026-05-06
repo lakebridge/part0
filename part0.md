@@ -6,12 +6,12 @@
 
     Note right of browser:User writes a note and clicks save
 
-    browser->>server POST /newnote https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: POST /newnote https://studies.cs.helsinki.fi/exampleapp/new_note
     Note left of server: Note stored on server
 
     server->>browser: HTTP redirects to /notes
 
-    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
     deactivate server
